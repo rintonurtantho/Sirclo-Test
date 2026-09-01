@@ -44,9 +44,18 @@ resource "aws_instance" "web" {
               # Enable & start Docker service
               sudo systemctl enable docker
               sudo systemctl start docker
+			  sudo usermod -aG docker ubuntu
               
-              # Add default ubuntu user to docker group
-              sudo usermod -aG docker ubuntu
+              # 2. Clone Repositori dan Jalankan App
+              # Ganti URL di bawah dengan URL repositori GitHub kamu
+              git clone https://github.com/rintonurtantho/Sirclo-Test.git /home/ubuntu/app
+              cd /home/ubuntu/app/app
+
+              # Buat file .env dari .env.example
+              cp .env.example .env
+
+              # Jalankan Docker Compose
+              sudo docker compose up -d
               EOF
 
   tags = {
