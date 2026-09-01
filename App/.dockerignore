@@ -4,3 +4,5 @@ __pycache__
 *.pyc
 *.log
 .env
+app/.env
+*.env
