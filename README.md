@@ -1,28 +1,6 @@
 # Cloud Infrastructure & Application Deployment (SIRCLO Practical Test)
 
-Repositori ini berisi konfigurasi Terraform dan Docker Compose untuk mengotomatisasi pembuatan infrastruktur cloud di AWS serta mendistribusikan aplikasi WordPress berbasis multi-kontainer.
-
----
-
-## Struktur Direktori
-
-.
-├── app/
-│   ├── docker-compose.yml   # Definisi layanan aplikasi (WordPress & MySQL)
-│   └── .env.example         # Templat variabel lingkungan
-├── terraform/
-│   ├── terraform.tf          # Konfigurasi versi Terraform & provider
-│   ├── provider.tf           # Pengaturan provider AWS
-│   ├── variables.tf          # Definisi variabel input
-│   ├── network.tf            # Konfigurasi VPC, Subnet, IGW, dan Route Table
-│   ├── interface.tf          # Aturan Security Group (Port SSH & Aplikasi)
-│   ├── vm.tf                 # Konfigurasi EC2 Instance & skrip User Data
-│   ├── outputs.tf            # Parameter output (IP Publik Instance)
-│   └── main.tf               # Titik masuk utama konfigurasi Terraform
-├── .gitignore                # Aturan pengecualian Git
-└── README.md                 # Dokumentasi proyek
-
----
+Repositori ini berisi konfigurasi Terraform dan Docker Compose untuk otomatisasi pembuatan infrastruktur cloud di AWS serta mendistribusikan aplikasi WordPress berbasis Docker.
 
 ## Prasyarat System
 
