@@ -1,0 +1,33 @@
+# Security Group (Allow Port 22 SSH & Port 8080 App)
+resource "aws_security_group" "web_sg" {
+  name        = "sirclo-web-sg"
+  description = "Allow SSH and HTTP on port 8080"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "WordPress App"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "sirclo-sg"
+  }
+}
