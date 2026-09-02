@@ -4,7 +4,7 @@ Repositori ini berisi konfigurasi Terraform dan Docker Compose untuk otomatisasi
 
 ## Prasyarat System
 
-Sebelum melakukan deployment, pastikan beberapa perkakas berikut sudah terinstal di perangkat lokal kamu:
+Sebelum melakukan deployment, pastikan beberapa tools berikut sudah terinstal di perangkat lokal kamu:
 - Terraform (versi >= 1.0.0)
 - AWS CLI (terkonfigurasi dengan access key yang valid)
 - Klien OpenSSH (atau PowerShell untuk pengguna Windows)
