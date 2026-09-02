@@ -1,4 +1,4 @@
-# Cloud Infrastructure & Application Deployment (SIRCLO Practical Test)
+# Cloud Infrastructure & Application Deployment
 
 Repositori ini berisi konfigurasi Terraform dan Docker Compose untuk otomatisasi pembuatan infrastruktur cloud di AWS serta mendistribusikan aplikasi WordPress berbasis Docker.
 
